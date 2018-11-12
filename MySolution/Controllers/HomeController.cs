@@ -6,20 +6,23 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using PagedList;
+using Elite.Models.Models;
 
 namespace MySolution.Controllers
 {
     public class HomeController : Controller
     {
-        DataEntities db = new DataEntities();
+        private EliteDbContext db = new EliteDbContext();
+        private const int ITEMS_PER_PAGE = 8;
+
         //GET: Home
         public ActionResult Index()
         {
             ProductListViewModels productListViewModels = new ProductListViewModels();
-            productListViewModels.ListTabOne = db.House.Where(h => h.TownShipId == 1 && h.Deleted != true).Take(8).ToList();
-            productListViewModels.ListTabTwo = db.House.Where(h => h.TownShipId == 2 && h.Deleted != true).Take(8).ToList();
-            productListViewModels.ListTabThree = db.House.Where(h => h.TownShipId == 4 && h.Deleted != true).Take(8).ToList();
-            productListViewModels.ListTabFour = db.House.Where(h => h.TownShipId == 3 && h.Deleted != true).Take(8).ToList();
+            productListViewModels.ListTabOne = db.Categories.Take(ITEMS_PER_PAGE).ToList();
+            productListViewModels.ListTabTwo = db.Categories.Take(ITEMS_PER_PAGE).ToList();
+            productListViewModels.ListTabThree = db.Categories.Take(ITEMS_PER_PAGE).ToList();
+            productListViewModels.ListTabFour = db.Categories.Take(ITEMS_PER_PAGE).ToList();
             return View(productListViewModels);
         }
         public ActionResult BannerPartial()
@@ -29,8 +32,8 @@ namespace MySolution.Controllers
         public ActionResult Headerpartial()
         {
             HeaderViewModel headerViewModel = new HeaderViewModel();
-            headerViewModel.HouseTypes = db.HouseType.ToList();
-            headerViewModel.Townships = db.Township.ToList();
+            headerViewModel.MenCategories = db.Categories.ToList();
+            headerViewModel.WomenCategories = db.Categories.ToList();
             return PartialView(headerViewModel);
         }
         public ActionResult FooterPartial()

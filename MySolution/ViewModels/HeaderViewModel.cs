@@ -1,4 +1,4 @@
-﻿using MySolution.Models;
+﻿using Elite.Models.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +8,7 @@ namespace MySolution.ViewModels
 {
     public class HeaderViewModel
     {
-        public ICollection<Township> Townships { get; set; }
-        public ICollection<HouseType> HouseTypes { get; set; }
+        public ICollection<Category> MenCategories { get; set; }
+        public ICollection<Category> WomenCategories { get; set; }
     }
 }

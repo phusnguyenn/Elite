@@ -1,4 +1,5 @@
-﻿using MySolution.Models;
+﻿using Elite.Models.Models;
+using MySolution.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,10 +9,10 @@ namespace MySolution.ViewModels
 {
     public class ProductListViewModels
     {
-        public List<House> ListTabOne { get; set; }
-        public List<House> ListTabTwo { get; set; }
-        public List<House> ListTabThree { get; set; }
-        public List<House> ListTabFour { get; set; }
+        public List<Category> ListTabOne { get; set; }
+        public List<Category> ListTabTwo { get; set; }
+        public List<Category> ListTabThree { get; set; }
+        public List<Category> ListTabFour { get; set; }
 
     }
 }
