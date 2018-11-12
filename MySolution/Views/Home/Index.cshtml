@@ -49,17 +49,17 @@
                                             <a href="single.html" class="link-product-add-cart">Quick View</a>
                                         </div>
                                     </div>
-                                    @*@if (DateTime.Now.Subtract(item.CreationTime).Days >= 5)
-                                    {*@
+                                    @if (DateTime.Now.Subtract(item.CreationTime).Days >= 5)
+                                    {
                                         <span class="product-new-top">New</span>
-                                    @* } *@
+                                    }
 
                                 </div>
                                 <div class="item-info-product ">
                                     <h4><a href="single.html">@item.ProductName</a></h4>
                                     <div class="info-product-price">
                                         <span class="item_price">$@item.Price.ToString("###,##")</span>
-                                        <del>$69.71</del>
+                                        <del>$69.96</del>
                                     </div>
                                     <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
                                         <form action="#" method="post">

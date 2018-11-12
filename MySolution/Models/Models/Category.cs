@@ -16,5 +16,6 @@ namespace Elite.Models.Models
 
         public string CategoryName { get; set; }
         public string Description { get; set; }
+        public string MainImage { get; set; }
     }
 }

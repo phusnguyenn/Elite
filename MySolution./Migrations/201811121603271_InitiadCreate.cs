@@ -3,7 +3,7 @@ namespace Elite.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class InitialCreate : DbMigration
+    public partial class InitiadCreate : DbMigration
     {
         public override void Up()
         {
@@ -14,6 +14,7 @@ namespace Elite.Migrations
                         Id = c.Long(nullable: false, identity: true),
                         ParentId = c.Long(),
                         CategoryName = c.String(),
+                        Description = c.String(),
                         IsDeleted = c.Boolean(nullable: false),
                         CreatorUserId = c.Long(),
                         CreationTime = c.DateTime(nullable: false),
@@ -71,7 +72,7 @@ namespace Elite.Migrations
                         ProductName = c.String(),
                         CategoryId = c.Long(nullable: false),
                         Price = c.Decimal(nullable: false, precision: 18, scale: 2),
-                        Desciption = c.String(),
+                        Description = c.String(),
                         IsDeleted = c.Boolean(nullable: false),
                         CreatorUserId = c.Long(),
                         CreationTime = c.DateTime(nullable: false),

@@ -94,9 +94,10 @@ E:\Projects\Elite-Phu\Elite\MySolution\bin\Microsoft.AI.DependencyCollector.xml
 E:\Projects\Elite-Phu\Elite\MySolution\bin\Microsoft.AI.WindowsServer.xml
 E:\Projects\Elite-Phu\Elite\MySolution\bin\Microsoft.AI.Web.xml
 E:\Projects\Elite-Phu\Elite\MySolution\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-E:\Projects\Elite-Phu\Elite\MySolution\obj\Debug\Elite.Migrations.InitialCreate.resources
-E:\Projects\Elite-Phu\Elite\MySolution\obj\Debug\Elite.csproj.GenerateResource.cache
 E:\Projects\Elite-Phu\Elite\MySolution\obj\Debug\Elite.csproj.CoreCompileInputs.cache
 E:\Projects\Elite-Phu\Elite\MySolution\obj\Debug\Elite.csproj.CopyComplete
 E:\Projects\Elite-Phu\Elite\MySolution\obj\Debug\MySolution.dll
 E:\Projects\Elite-Phu\Elite\MySolution\obj\Debug\MySolution.pdb
+E:\Projects\Elite-Phu\Elite\MySolution\obj\Debug\Elite.csprojAssemblyReference.cache
+E:\Projects\Elite-Phu\Elite\MySolution\obj\Debug\Elite.Migrations.InitiadCreate.resources
+E:\Projects\Elite-Phu\Elite\MySolution\obj\Debug\Elite.csproj.GenerateResource.cache
