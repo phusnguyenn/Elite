@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Mvc;
 
-namespace MySolution
+namespace Elite
 {
     public class FilterConfig
     {

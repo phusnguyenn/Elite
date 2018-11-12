@@ -1,4 +1,4 @@
-namespace MySolution.Migrations
+namespace Elite.Migrations
 {
     using System;
     using System.Data.Entity.Migrations;

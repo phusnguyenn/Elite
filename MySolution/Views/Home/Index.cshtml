@@ -2,7 +2,7 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_MainLayout.cshtml";
 }
-@using MySolution.ViewModels
+@using Elite.ViewModels
 @model ProductListViewModels
 @section Use{
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -49,14 +49,14 @@
                                             <a href="single.html" class="link-product-add-cart">Quick View</a>
                                         </div>
                                     </div>
-                                    @if (DateTime.Now.Subtract(item.DateCreated).Days >= 5)
+                                    @if (DateTime.Now.Subtract(item.CreationTime).Days >= 5)
                                     {
                                         <span class="product-new-top">New</span>
                                     }
 
                                 </div>
                                 <div class="item-info-product ">
-                                    <h4><a href="single.html">@item.Address</a></h4>
+                                    <h4><a href="single.html">@item.ProductName</a></h4>
                                     <div class="info-product-price">
                                         <span class="item_price">$@item.Price.ToString("###,##")</span>
                                         @*<del>$69.71</del>*@

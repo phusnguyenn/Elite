@@ -1,18 +1,17 @@
 ﻿using Elite.Models.Models;
-using MySolution.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace MySolution.ViewModels
+namespace Elite.ViewModels
 {
     public class ProductListViewModels
     {
-        public List<Category> ListTabOne { get; set; }
-        public List<Category> ListTabTwo { get; set; }
-        public List<Category> ListTabThree { get; set; }
-        public List<Category> ListTabFour { get; set; }
+        public List<Product> ListTabOne { get; set; }
+        public List<Product> ListTabTwo { get; set; }
+        public List<Product> ListTabThree { get; set; }
+        public List<Product> ListTabFour { get; set; }
 
     }
 }

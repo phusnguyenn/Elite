@@ -1,4 +1,4 @@
-namespace MySolution.Migrations
+namespace Elite.Migrations
 {
     using Elite.Models.Models;
     using System;
