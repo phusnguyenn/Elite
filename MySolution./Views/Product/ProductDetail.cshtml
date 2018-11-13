@@ -60,8 +60,8 @@
             </div>
         </div>
         <div class="col-md-8 single-right-left simpleCart_shelfItem">
-            <h3>Big Wing Sneakers  (Navy)</h3>
-            <p><span class="item_price">$650</span> <del>- $900</del></p>
+            <h3>@Model.ProductName</h3>
+            <p><span class="item_price">$@Model.Price</span> <del>- @Model.OldPrice</del></p>
             <div class="rating1">
                 <span class="starRating">
                     <input id="rating5" type="radio" name="rating" value="5" checked="">
@@ -114,8 +114,8 @@
                             <input type="hidden" name="cmd" value="_cart">
                             <input type="hidden" name="add" value="1">
                             <input type="hidden" name="business" value=" ">
-                            <input type="hidden" name="item_name" value="Wing Sneakers">
-                            <input type="hidden" name="amount" value="650.00">
+                            <input type="hidden" name="item_name" value="@Model.ProductName">
+                            <input type="hidden" name="amount" value="@Model.Price">
                             <input type="hidden" name="discount_amount" value="1.00">
                             <input type="hidden" name="currency_code" value="USD">
                             <input type="hidden" name="return" value=" ">
