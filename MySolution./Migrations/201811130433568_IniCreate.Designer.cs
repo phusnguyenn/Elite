@@ -7,13 +7,13 @@ namespace Elite.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class InitiadCreate : IMigrationMetadata
+    public sealed partial class IniCreate : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(InitiadCreate));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(IniCreate));
         
         string IMigrationMetadata.Id
         {
-            get { return "201811121603271_InitiadCreate"; }
+            get { return "201811130433568_IniCreate"; }
         }
         
         string IMigrationMetadata.Source
