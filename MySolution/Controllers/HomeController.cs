@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using PagedList;
 using Elite.Models.Models;
 using Elite.ViewModels;
+using Elite.Models;
 
 namespace Elite.Controllers
 {
@@ -18,16 +19,18 @@ namespace Elite.Controllers
         public ActionResult Index()
         {
             ProductListViewModels productListViewModels = new ProductListViewModels();
-            productListViewModels.ListTabOne = db.Products.Take(ITEMS_PER_PAGE).ToList();
-            productListViewModels.ListTabTwo = db.Products.Take(ITEMS_PER_PAGE).ToList();
-            productListViewModels.ListTabThree = db.Products.Take(ITEMS_PER_PAGE).ToList();
-            productListViewModels.ListTabFour = db.Products.Take(ITEMS_PER_PAGE).ToList();
+            productListViewModels.ListTabOne = db.Products.Where(x => x.Gender == Gender.Male).OrderBy(x => x.CreationTime).Take(ITEMS_PER_PAGE).ToList();
+            productListViewModels.ListTabTwo = db.Products.Where(x => x.Gender == Gender.Female).OrderBy(x => x.CreationTime).Take(ITEMS_PER_PAGE).ToList();
+            productListViewModels.ListTabThree = db.Products.Where(x => x.CategoryId == 3).OrderBy(x => x.CreationTime).Take(ITEMS_PER_PAGE).ToList();
+            productListViewModels.ListTabFour = db.Products.Where(x => x.CategoryId == 5).OrderBy(x => x.CreationTime).Take(ITEMS_PER_PAGE).ToList();
             return View(productListViewModels);
         }
+
         public ActionResult BannerPartial()
         {
             return PartialView();
         }
+
         public ActionResult Headerpartial()
         {
             HeaderViewModel headerViewModel = new HeaderViewModel();
@@ -35,10 +38,12 @@ namespace Elite.Controllers
             headerViewModel.WomenCategories = db.Categories.ToList();
             return PartialView(headerViewModel);
         }
+
         public ActionResult FooterPartial()
         {
             return PartialView();
         }
+
         public ActionResult Error(object errorCode)
         {
             errorCode = TempData["ErrorCode"];

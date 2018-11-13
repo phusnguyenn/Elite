@@ -166,9 +166,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201811121603271_InitiadCreate.cs" />
-    <Compile Include="Migrations\201811121603271_InitiadCreate.Designer.cs">
-      <DependentUpon>201811121603271_InitiadCreate.cs</DependentUpon>
+    <Compile Include="Migrations\201811130433568_IniCreate.cs" />
+    <Compile Include="Migrations\201811130433568_IniCreate.Designer.cs">
+      <DependentUpon>201811130433568_IniCreate.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Base\BaseModel.cs" />
@@ -350,8 +350,8 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201811121603271_InitiadCreate.resx">
-      <DependentUpon>201811121603271_InitiadCreate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201811130433568_IniCreate.resx">
+      <DependentUpon>201811130433568_IniCreate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
