@@ -1,14 +1,13 @@
-﻿using MySolution.Models;
-using MySolution.ViewModels;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using PagedList;
 using Elite.Models.Models;
+using Elite.ViewModels;
 
-namespace MySolution.Controllers
+namespace Elite.Controllers
 {
     public class HomeController : Controller
     {
@@ -19,10 +18,10 @@ namespace MySolution.Controllers
         public ActionResult Index()
         {
             ProductListViewModels productListViewModels = new ProductListViewModels();
-            productListViewModels.ListTabOne = db.Categories.Take(ITEMS_PER_PAGE).ToList();
-            productListViewModels.ListTabTwo = db.Categories.Take(ITEMS_PER_PAGE).ToList();
-            productListViewModels.ListTabThree = db.Categories.Take(ITEMS_PER_PAGE).ToList();
-            productListViewModels.ListTabFour = db.Categories.Take(ITEMS_PER_PAGE).ToList();
+            productListViewModels.ListTabOne = db.Products.Take(ITEMS_PER_PAGE).ToList();
+            productListViewModels.ListTabTwo = db.Products.Take(ITEMS_PER_PAGE).ToList();
+            productListViewModels.ListTabThree = db.Products.Take(ITEMS_PER_PAGE).ToList();
+            productListViewModels.ListTabFour = db.Products.Take(ITEMS_PER_PAGE).ToList();
             return View(productListViewModels);
         }
         public ActionResult BannerPartial()

@@ -17,6 +17,6 @@ namespace Elite.Models.Models
         public long CategoryId { get; set; }
 
         public decimal Price { get; set; }
-        public string Desciption { get; set; }
+        public string Description { get; set; }
     }
 }

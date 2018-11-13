@@ -1,4 +1,4 @@
-﻿@using MySolution.ViewModels
+﻿@using Elite.ViewModels
 @model HeaderViewModel
 <!-- header -->
 <div class="header" id="home">
@@ -91,19 +91,21 @@
                                             <ul class="multi-column-dropdown">
                                                 @{
                                                     int pageSize = 7;
-                                                    var listTownship = Model.Townships.ToList();
+                                                    var listTownship = Model.MenCategories.ToList();
                                                     if (listTownship.Count >= pageSize)
                                                     {
                                                         foreach (var item in listTownship.GetRange(0, pageSize))
                                                         {
-                                                            <li>@Html.ActionLink(item.Name, "TownshipProduct", "Product", new { id = item.TownshipId }, null)</li>
+                                                            <li>@Html.ActionLink(item.CategoryName, "Home", "Index", new { id = item.Id }, null)</li>
+                                                            //<li>@Html.ActionLink(item.Name, "TownshipProduct", "Product", new { id = item.Id }, null)</li>
                                                         }
                                                     }
                                                     else
                                                     {
                                                         foreach (var item in listTownship.ToList())
                                                         {
-                                                            <li>@Html.ActionLink(item.Name, "TownshipProduct", "Product", new { id = item.TownshipId }, null)</li>
+                                                            <li>@Html.ActionLink(item.CategoryName, "Home", "Index", new { id = item.Id }, null)</li>
+                                                            //<li>@Html.ActionLink(item.Name, "TownshipProduct", "Product", new { id = item.Id }, null)</li>
                                                         }
                                                     }
                                                 }
@@ -111,7 +113,7 @@
                                         </div>
                                         @{
                                             int itemPageRemain = listTownship.Count - pageSize;
-                                            if (Model.Townships.Count > pageSize)
+                                            if (Model.MenCategories.Count > pageSize)
                                             {
                                                 <div class="col-sm-3 multi-gd-img">
                                                     <ul class="multi-column-dropdown">
@@ -120,14 +122,16 @@
                                                             {
                                                                 foreach (var item in listTownship.GetRange(pageSize, itemPageRemain))
                                                                 {
-                                                                    <li>@Html.ActionLink(item.Name, "TownshipProduct", "Product", new { id = item.TownshipId }, null)</li>
+                                                                    <li>@Html.ActionLink(item.CategoryName, "Home", "Index", new { id = item.Id }, null)</li>
+                                                                    //<li>@Html.ActionLink(item.Name, "TownshipProduct", "Product", new { id = item.Id }, null)</li>
                                                                 }
                                                             }
                                                             else
                                                             {
                                                                 foreach (var item in listTownship.GetRange(pageSize, 7))
                                                                 {
-                                                                    <li>@Html.ActionLink(item.Name, "TownshipProduct", "Product", new { id = item.TownshipId }, null)</li>
+                                                                    <li>@Html.ActionLink(item.CategoryName, "Home", "Index", new { id = item.Id }, null)</li>
+                                                                    //<li>@Html.ActionLink(item.Name, "TownshipProduct", "Product", new { id = item.Id }, null)</li>
                                                                 }
                                                             }
                                                         }
@@ -146,19 +150,21 @@
                                         <div class="col-sm-3 multi-gd-img">
                                             <ul class="multi-column-dropdown">
                                                 @{
-                                                    var listHouseTypes = Model.HouseTypes.ToList();
+                                                    var listHouseTypes = Model.WomenCategories.ToList();
                                                     if (listHouseTypes.Count >= pageSize)
                                                     {
                                                         foreach (var item in listHouseTypes.GetRange(0, pageSize))
                                                         {
-                                                            <li>@Html.ActionLink(item.Name, "HouseTypeProduct", "Product", new { id = item.HouseTypeId }, null)</li>
+                                                            <li>@Html.ActionLink(item.CategoryName, "Category", "Product", new { id = item.Id }, null)</li>
+                                                            //<li>@Html.ActionLink(item.Name, "HouseTypeProduct", "Product", new { id = item.Id }, null)</li>
                                                         }
                                                     }
                                                     else
                                                     {
                                                         foreach (var item in listHouseTypes.ToList())
                                                         {
-                                                            <li>@Html.ActionLink(item.Name, "HouseTypeProduct", "Product", new { id = item.HouseTypeId }, null)</li>
+                                                            <li>@Html.ActionLink(item.CategoryName, "Home", "Index", new { id = item.Id }, null)</li>
+                                                            //<li>@Html.ActionLink(item.Name, "HouseTypeProduct", "Product", new { id = item.Id }, null)</li>
                                                         }
                                                     }
                                                 }
@@ -167,26 +173,28 @@
                                         <div class="col-sm-3 multi-gd-img">
                                             @{
                                                 itemPageRemain = listHouseTypes.Count - pageSize;
-                                                if (Model.HouseTypes.Count > pageSize)
+                                                if (Model.WomenCategories.Count > pageSize)
                                                 {
-                                                    <ul class="multi-column-dropdown">
-                                                        @{
-                                                            if (itemPageRemain <= pageSize)
-                                                            {
-                                                                foreach (var item in listHouseTypes.GetRange(pageSize, itemPageRemain))
-                                                                {
-                                                                    <li>@Html.ActionLink(item.Name, "HouseTypeProduct", "Product", new { id = item.HouseTypeId }, null)</li>
-                                                                }
-                                                            }
-                                                            else
-                                                            {
-                                                                foreach (var item in listHouseTypes.GetRange(pageSize, 7))
-                                                                {
-                                                                    <li>@Html.ActionLink(item.Name, "HouseTypeProduct", "Product", new { id = item.HouseTypeId }, null)</li>
-                                                                }
-                                                            }
+                                            <ul class="multi-column-dropdown">
+                                                @{
+                                                    if (itemPageRemain <= pageSize)
+                                                    {
+                                                        foreach (var item in listHouseTypes.GetRange(pageSize, itemPageRemain))
+                                                        {
+                                                            <li>@Html.ActionLink(item.CategoryName, "Home", "Index", new { id = item.Id }, null)</li>
+                                                            //<li>@Html.ActionLink(item.Name, "HouseTypeProduct", "Product", new { id = item.Id }, null)</li>
                                                         }
-                                                    </ul>
+                                                    }
+                                                    else
+                                                    {
+                                                        foreach (var item in listHouseTypes.GetRange(pageSize, 7))
+                                                        {
+                                                            <li>@Html.ActionLink(item.CategoryName, "Home", "Index", new { id = item.Id }, null)</li>
+                                                            //<li>@Html.ActionLink(item.Name, "HouseTypeProduct", "Product", new { id = item.Id }, null)</li>
+                                                        }
+                                                    }
+                                                }
+                                            </ul>
                                                 }
                                             }
                                         </div>
