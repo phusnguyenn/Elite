@@ -99,8 +99,6 @@ E:\Projects\Elite-Phu\Elite\MySolution\obj\Debug\Elite.csproj.CopyComplete
 E:\Projects\Elite-Phu\Elite\MySolution\obj\Debug\MySolution.dll
 E:\Projects\Elite-Phu\Elite\MySolution\obj\Debug\MySolution.pdb
 E:\Projects\Elite-Phu\Elite\MySolution\obj\Debug\Elite.csprojAssemblyReference.cache
-E:\Projects\Elite-Phu\Elite\MySolution\obj\Debug\Elite.Migrations.InitiadCreate.resources
-E:\Projects\Elite-Phu\Elite\MySolution\obj\Debug\Elite.csproj.GenerateResource.cache
 D:\Private\New folder\Elite\MySolution\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
 D:\Private\New folder\Elite\MySolution\bin\roslyn\Microsoft.CodeAnalysis.dll
 D:\Private\New folder\Elite\MySolution\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
@@ -203,3 +201,5 @@ D:\Private\New folder\Elite\MySolution\obj\Debug\Elite.csproj.CoreCompileInputs.
 D:\Private\New folder\Elite\MySolution\obj\Debug\Elite.csproj.CopyComplete
 D:\Private\New folder\Elite\MySolution\obj\Debug\MySolution.dll
 D:\Private\New folder\Elite\MySolution\obj\Debug\MySolution.pdb
+E:\Projects\Elite-Phu\Elite\MySolution\obj\Debug\Elite.Migrations.InitalCreate.resources
+E:\Projects\Elite-Phu\Elite\MySolution\obj\Debug\Elite.csproj.GenerateResource.cache
