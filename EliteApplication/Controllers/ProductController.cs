@@ -73,5 +73,11 @@ namespace MySolution.Controllers
             }
             return View("~/Views/Product/ProductDetail.cshtml", product);
         }
+
+        public ActionResult Search(string query)
+        {
+            var products = db.Products.Where(x => !x.IsDeleted && x.ProductName.Contains(query.TrimStart()));
+            return View("~/Views/Product/Product.cshtml", products);
+        }
     }
 }
