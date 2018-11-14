@@ -1,5 +1,6 @@
 ﻿using Elite.Models.Models;
 using Elite.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
@@ -74,10 +75,9 @@ namespace MySolution.Controllers
             return View("~/Views/Product/ProductDetail.cshtml", product);
         }
 
-        public ActionResult Search(string query)
+        public string Search(string query)
         {
-            var products = db.Products.Where(x => !x.IsDeleted && x.ProductName.Contains(query.TrimStart()));
-            return View("~/Views/Product/Product.cshtml", products);
+            return query;
         }
     }
 }

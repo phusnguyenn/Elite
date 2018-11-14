@@ -1,5 +1,6 @@
 ﻿@using Elite.ViewModels
 @model HeaderViewModel
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <!-- header -->
 <div class="header" id="home">
     <div class="container">
@@ -16,7 +17,7 @@
 <div class="header-bot">
     <div class="header-bot_inner_wthreeinfo_header_mid">
         <div class="col-md-4 header-middle">
-            <form action="#" method="post">
+            <form>
                 <input type="search" name="search" placeholder="Search here..." required="" id="txtSearch">
                 <input type="submit" id="btnSearch" value=" ">
                 <div class="clearfix"></div>
@@ -24,15 +25,20 @@
             <script>
                 $(document).ready(function () {
                     $("#btnSearch").click(function () {
-                        alert("Works!")
-                        //$.ajax({
-                        //    url: "~/Product/Search",
-                        //    type: "POST",
-                        //    data: $("#txtSearch").val()
-                        //})
+                        $.ajax({
+                            url: "/Product/Search",
+                            type: "POST",
+                            data: $("#txtSearch").val(),
+                            success: function (data) {
+                                alert("123")
+                                Location.href("~/Product/Product/" + data)
+                            },
+                            error: function (data) {
+                                $(".new_arrivals_agile_w3ls_info").html(data)
+                            }
+                        })
                     });
                 });
-
             </script>
         </div>
         <!-- header-bot -->
