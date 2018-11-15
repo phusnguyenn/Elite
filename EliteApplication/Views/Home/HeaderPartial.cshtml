@@ -17,29 +17,12 @@
 <div class="header-bot">
     <div class="header-bot_inner_wthreeinfo_header_mid">
         <div class="col-md-4 header-middle">
-            <form>
-                <input type="search" name="search" placeholder="Search here..." required="" id="txtSearch">
-                <input type="submit" id="btnSearch" value=" ">
+            @using (Html.BeginForm("Search", "Product", FormMethod.Get))
+            {
+                <input type="search" name="query" id="query" placeholder="Search here..." required="">
+                <input type="submit" value=" ">
                 <div class="clearfix"></div>
-            </form>
-            <script>
-                $(document).ready(function () {
-                    $("#btnSearch").click(function () {
-                        $.ajax({
-                            url: "/Product/Search",
-                            type: "POST",
-                            data: $("#txtSearch").val(),
-                            success: function (data) {
-                                alert("123")
-                                Location.href("~/Product/Product/" + data)
-                            },
-                            error: function (data) {
-                                $(".new_arrivals_agile_w3ls_info").html(data)
-                            }
-                        })
-                    });
-                });
-            </script>
+            }
         </div>
         <!-- header-bot -->
         <div class="col-md-4 logo_agile">
