@@ -18,7 +18,6 @@ namespace MySolution.Controllers
             return View();
         }
 
-
         [HttpGet]
         public ActionResult Product(int? page)
         {
@@ -37,32 +36,18 @@ namespace MySolution.Controllers
                 TempData["ErrorCode"] = 404;
                 return RedirectToAction("Error", "Home");
             }
-            //var qproducts = from cat in db.Categories.Where(s => s.Id == id && !s.IsDeleted)
-            //                join pro in db.Products on cat.Id equals pro.CategoryId into listProduct
-            //                select new CategoryViewModel
-            //                {
-            //                    Id = cat.Id,
-            //                    CategoryName = cat.CategoryName,
-            //                    MainImage = cat.MainImage,
-            //                    Description = cat.Description,
-            //                    Products = paging.GetPaging(listProduct,page),
-            //                    NewProducts = listProduct.OrderByDescending(s => s.CreationTime).Take(3)
-            //                };
-
-            var products = db.Products.Where(s => s.CategoryId == id && !s.IsDeleted);
+            var products = db.Products.Where(s => s.CategoryId == id && !s.IsDeleted).OrderByDescending(s=>s.CreationTime);
             var categoryViewModel = new CategoryViewModel
             {
                 Id = id,
                 CategoryName = category.CategoryName,
                 MainImage = category.MainImage,
                 Description = category.Description,
-                NewProducts = products.OrderByDescending(s=>s.CreationTime).Take(3),
+                NewProducts = products.Take(3),
                 Products = paging.GetPaging(products,page)
             };
             return View("~/Views/Product/Category.cshtml", categoryViewModel);
-
         }
-
 
         public ActionResult ProductDetail(long id)
         {
