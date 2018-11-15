@@ -1,4 +1,5 @@
-﻿using Elite.Models.Models;
+﻿using Elite.Common;
+using Elite.Models.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +13,7 @@ namespace Elite.ViewModels
         public string CategoryName { get; set; }
         public string MainImage { get; set; }
         public string Description { get; set; }
-        public IEnumerable<Product> Products { get; set; }
+        public Pager<Product> Products { get; set; }
         public IEnumerable<Product> NewProducts { get; set; }
     }
 }

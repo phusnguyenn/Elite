@@ -313,6 +313,18 @@
                 }
             }
             <div class="clearfix"></div>
+            @if (Model.Products.Count > 0)
+            {
+                <div align="center">
+                    @Html.Partial("PagingPartial", Model.Products)
+                </div>
+            }
+            else
+            {
+                <div align="center">
+                    <h3>No products to show! </h3>
+                </div>
+            }
         </div>
     </div>
 </div>
