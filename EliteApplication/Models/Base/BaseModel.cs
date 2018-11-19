@@ -1,16 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Elite.Models.Base;
+using System;
 
 namespace Elite.Base
 {
-    public class BaseModel : IBaseModel
+    public class BaseModel : IBaseModel, IEntity
     {
-
         public long Id { get; set; }
         public bool IsDeleted { get; set; } = false;
         public long? CreatorUserId { get; set; }

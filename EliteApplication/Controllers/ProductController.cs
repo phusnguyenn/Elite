@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
 
-namespace MySolution.Controllers
+namespace Elite.Controllers
 {
     public class ProductController : Controller
     {
